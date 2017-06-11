@@ -23,10 +23,14 @@ $ldontraptype = array(
 
 switch ($action) {
   case 0:         
-    if ($npcid) {
-	  $body = new Template("templates/adventures/adventures.searchresults.tmpl.php");
+    if (!$npcid) {
+      $body = new Template("templates/adventures/adventures.searchresults.tmpl.php");
       $results = search_adventure_npc();
       $body->set("results", $results);
+    } else if ($npcid) {
+      $body = new Template("templates/adventures/adventures.tmpl.php");
+      $body->set('currzone', $z);
+      $body->set('npcid', $npcid);
     }
     break;
   case 1: // Assassinate Adventures
