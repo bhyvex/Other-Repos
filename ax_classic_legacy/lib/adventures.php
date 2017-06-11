@@ -23,7 +23,7 @@ $ldontraptype = array(
 
 switch ($action) {
   case 0:         
-    if (!$npcid) {
+    if ($npcid) {
 	  $body = new Template("templates/adventures/adventures.searchresults.tmpl.php");
       $results = search_adventure_npc();
       $body->set("results", $results);
