@@ -5,7 +5,7 @@
         <div class="table_content">
 <?if($results != ''):?>
 <?foreach($results as $result): extract($result);?>
-          <center><a href="index.php?editor=adventures&z=<?=get_zone_by_npcid($id)?>&zoneid=<?=get_zoneid_by_npcid($id)?>&npcid=<?=$id?>"><?=$name?> - (<?=get_zone_by_npcid($id)?>)</a><br></center>
+          <center><a href="index.php?editor=adventures&z=<?=get_zone_by_npcid($id)?>&npcid=<?=$id?>"><?=$name?> - (<?=get_zone_by_npcid($id)?>)</a><br></center>
 <?endforeach;?>
 <?endif;?>
 <?if($results == ''):?>
