@@ -1,6 +1,9 @@
 AX Classic Editor Changelog (Started May 9, 2009) --Belatedly
 -----------------------------------------------------
-==June 11, 2017 ==
+==June 13, 2017==
+Patrikpatrik: Fixed missing headers in columns' Adventure tab.
+
+==June 11, 2017==
 Patrikpatrik: Added adventures tab to be displayed correctly, still needs further testing.
 
 ==September 8, 2009==
