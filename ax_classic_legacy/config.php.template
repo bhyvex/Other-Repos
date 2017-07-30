@@ -4,9 +4,9 @@
 $serverName = 'OctiPlex-755';
 
 // Database Information:
-$dbhost = '192.168.2.125';
-$dbuser = 'eq';
-$dbpass = 'lansing222';
+$dbhost = 'HOSTNAME or IP';
+$dbuser = 'USERNAME';
+$dbpass = 'PASSWORD';
 $db = 'ax_classic';
 
 /*  Limit zone lists to a specified expansion
