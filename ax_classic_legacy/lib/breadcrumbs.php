@@ -42,6 +42,9 @@ switch ($editor) {
   case 'items':
     $breadcrumbs = "Item Editor";
     break;
+  case 'keys':
+    $breadcrumbs = "Player Keys";
+    break;
 
 }
 

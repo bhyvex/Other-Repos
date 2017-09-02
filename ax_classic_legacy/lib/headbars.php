@@ -108,6 +108,9 @@ switch ($editor) {
     $searchbar = new Template("templates/searchbar/searchbar.items.tmpl.php");
     $searchbar->set('curreditor', $editor);
     break;
+  case 'keys':
+    $searchbar = new Template("templates/searchbar/searchbar.keys.tmpl.php");
+    break;
 }
 
 function build_tabs () {
@@ -126,6 +129,7 @@ function build_tabs () {
   $tabstatus11 = "off";
   $tabstatus12 = "off";
   $tabstatus13 = "off";
+  $tabstatus14 = "off";
   
   $url = '';
   if ($z) $url = $url . "&z=$z";
@@ -174,6 +178,9 @@ function build_tabs () {
     case 'items':
       $tabstatus13 = "on";
       break;
+	case 'keys':
+	  $tabstatus14 = "on";
+	  break;
   }
 
   $admin = '';
@@ -197,7 +204,8 @@ function build_tabs () {
         <div class=\"$tabstatus10\"><a href=\"index.php?editor=server$url\">Server</a></div>
         <div class=\"$tabstatus11\"><a href=\"index.php?editor=adventures$url\">Adventures</a></div><br><br>
         <div class=\"$tabstatus12\"><a href=\"index.php?editor=tasks$url\">Task Editor</a></div>
-        <div class=\"$tabstatus13\"><a href=\"index.php?editor=items$url\">Items Editor</a></div><br>
+        <div class=\"$tabstatus13\"><a href=\"index.php?editor=items$url\">Items Editor</a></div>
+		<div class=\"$tabstatus14\"><a href=\"index.php?editor=keys\">Keys</a></div><br>
         <div style=\"float: right;\">$admin<a href=\"index.php?logout\">Logout</a></div>
         <div style=\"float: right; width: 270px; color:rgb(120,0,0); font-size: .85em; text-decoration: blink;\">$serverName Database</a></div>
 

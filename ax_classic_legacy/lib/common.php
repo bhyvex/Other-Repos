@@ -1,7 +1,5 @@
 <?
 
-
-
 function getNPCName($npcid) {
   global $mysql;
   
@@ -162,4 +160,32 @@ function get_zone_by_npcid($npcid) {
   $result = $mysql->query_assoc($query);
   return $result['short_name'];
 }
+
+function getPlayerName($playerid) {
+  global $mysql;
+  
+  if ($playerid > 0) {
+    $query = "SELECT name FROM character_ WHERE id=$playerid";
+    $result = $mysql->query_assoc($query);
+    return $result['name'];
+  }
+  else {
+    return "";
+  }
+}
+// adding here
+function item_isNoRent($item_id) {
+  global $mysql;
+
+  $query = "SELECT norent FROM items WHERE id=$item_id";
+  $result = $mysql->query_assoc($query);
+
+  if ($result['norent'] == 0) {
+    return true;
+  }
+  else {
+    return false;
+  }
+}
+
 ?>
