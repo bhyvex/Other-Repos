@@ -72,6 +72,12 @@
                </td>
 
          </tr>
+		  <tr>
+		    <th>Nokeyring</th>
+		  </tr>
+		  <tr>
+		    <td><input type="text" size="7" name="nokeyring" value="<?=$nokeyring?>"></td>
+		  </tr>
               </table><br><br>
         <center>
           <input type="hidden" name="drid" value="<?=$id?>">
