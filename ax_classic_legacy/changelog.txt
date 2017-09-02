@@ -1,10 +1,10 @@
 AX Classic Editor Changelog (Started May 9, 2009) --Belatedly
 |-------------------------------------------------------------|
 
-==9/02/2017==
+==September 2, 2017==
 Patrikpatrik: Displayed Editor changelog below Boomba the Big.
 
-==9/01/2017==
+==September 1, 2017==
 Patrikpatrik: Added Nokeyring column in Misc tab Doors.
 Patrikpatrik: Added Key tab next to items to search keyrings.
 
