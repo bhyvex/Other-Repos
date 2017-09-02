@@ -20,10 +20,13 @@ $tskid = (isset($_GET['tskid']) ? $_GET['tskid'] : '');
 $ts = (isset($_GET['ts']) ? $_GET['ts'] : '');
 $rec = (isset($_GET['rec']) ? intval($_GET['rec']) : '0');
 $spellset = (isset($_GET['spellset']) ? $_GET['spellset'] : '');
+$playerid = (isset($_GET['playerid']) ? $_GET['playerid'] : null);
+
 $searchbar = '';
 $body = '';
 $javascript = '';
 $breadcrumbs = '';
+$headbar = '';
 
 require_once('lib/headbars.php');
 require_once('lib/breadcrumbs.php');
@@ -77,6 +80,9 @@ switch ($editor) {
   case 'items':
     require_once('lib/items.php');
     break;
+  case 'keys':
+	require_once('lib/keys.php');
+	break;
 }
 
 $tmpl->set('javascript', $javascript);
