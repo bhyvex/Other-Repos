@@ -1,0 +1,12 @@
+AX Classic Editor Changelog (Started June 7, 2017)
+|================================|
+
+==9/01/2017==
+Patrikpatrik: Added Nokeyring column in Misc tab Doors.
+Patrikpatrik: Added Key tab next to items to search keyrings.
+
+==6/13/2017==
+Patrikpatrik: Corrected mismatched columns in Adventures header.
+
+==6/07/2017==
+Patrikpatrik: Fixed Adventures tab to display.
