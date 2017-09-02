@@ -1,5 +1,6 @@
 AX Classic Editor Changelog (Started May 9, 2009) --Belatedly
-|-----------------------------------------------------|
+|-------------------------------------------------------------|
+
 ==9/02/2017==
 Patrikpatrik: Displayed Editor changelog below Boomba the Big.
 
