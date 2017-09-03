@@ -34,7 +34,7 @@ $expansion_limit = 10;
 // Set the two variables below to the values you want to be in the form when you start it up.
 // (default login: admin  pw: password)
 $login = 'admin';
-$password = 'valerian22';
+$password = 'password';
 
 // Log SQL queries:  1 = on, 0 = off
 $logging = 1;
