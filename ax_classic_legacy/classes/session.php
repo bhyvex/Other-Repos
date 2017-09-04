@@ -87,7 +87,7 @@ class session {
     $result = $mysql->query_assoc($query);
     extract($result);
     
-    if ($administrator == 1) {
+    if ($administrator == 1 || 2) {
       return true;
     }
     else return false;
