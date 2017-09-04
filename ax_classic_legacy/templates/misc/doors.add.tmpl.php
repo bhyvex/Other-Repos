@@ -67,7 +67,9 @@
             <td><input type="text" size="7" name="version" value="0"></td>
          </tr>
 		 <tr>
-			<th>LDoN</th> 
+			<th>LDoN</th>
+			<th>keyitem</th>
+			<th>keyitem2</th>
 		    <th>Nokeyring</th>
 		  </tr>
 		  <tr>
@@ -77,6 +79,8 @@
                    <option value="1"<?echo ($is_ldon_door == 1) ? " selected" : ""?>>Yes</option>
                  </select>
             </td>
+			<td><input type="text" size="7" name="keyitem" value="0"></td>
+            <td><input type="text" size="7" name="keyitem2" value="0"></td>
 		    <td><input type="text" size="7" name="nokeyring" value="0"></td>
 		  </tr>
               </table><br><br>

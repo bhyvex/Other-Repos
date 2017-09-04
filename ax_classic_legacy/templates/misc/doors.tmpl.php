@@ -1,4 +1,4 @@
-      <div class="table_container" style="width: 750px;">
+      <div class="table_container" style="width: 800px;">
       <div class="table_header">
         <table width="100%" cellpadding="0" cellspacing="0">
           <tr>
@@ -26,6 +26,8 @@
           <td align="center" width="2%"><strong>Dest X</strong></td>
           <td align="center" width="2%"><strong>Dest Y</strong></td>
           <td align="center" width="2%"><strong>Dest Z</strong></td>
+		  <td align="center" width="2%"><strong>keyitem</strong></td>
+		  <td align="center" width="2%"><strong>keyitem2</strong></td>
 		  <td align="center" width="2%"><strong>NoKeyRing</strong></td>
           <td align="center" width="2%"><strong>LDoN</strong></td>
           <th width="5%"></th>
@@ -50,6 +52,8 @@
           <td align="center" width="2%"><?=$v['dest_x']?></td>
           <td align="center" width="2%"><?=$v['dest_y']?></td>
           <td align="center" width="2%"><?=$v['dest_z']?></td>
+		  <td align="center" width="2%"><?=$v['keyitem']?></td>
+		  <td align="center" width="2%"><?=$v['keyitem2']?></td>
           <td align="center" width="2%"><?=$v['nokeyring']?></td>
           <td align="center" width="2%"><?=$yesno[$v['is_ldon_door']]?></td>
           <td align="right">      

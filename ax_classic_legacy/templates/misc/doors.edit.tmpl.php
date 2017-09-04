@@ -73,9 +73,13 @@
 
          </tr>
 		  <tr>
-		    <th>Nokeyring</th>
+		    <th>keyitem</th>
+			<th>keyitem2</th>
+			<th>Nokeyring</th>
 		  </tr>
 		  <tr>
+		    <td><input type="text" size="7" name="keyitem" value="<?=$keyitem?>"></td>
+		    <td><input type="text" size="7" name="keyitem2" value="<?=$keyitem2?>"></td>
 		    <td><input type="text" size="7" name="nokeyring" value="<?=$nokeyring?>"></td>
 		  </tr>
               </table><br><br>
