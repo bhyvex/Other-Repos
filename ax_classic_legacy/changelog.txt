@@ -1,6 +1,9 @@
 AX Classic Editor Changelog (Started May 9, 2009) --Belatedly
 |-------------------------------------------------------------|
 
+==September 4, 2017==
+Patrikpatrik: Added keyitem & keyitem2 columns in Misc tab Doors.
+
 ==September 2, 2017==
 Patrikpatrik: Displayed Editor changelog below Boomba the Big.
 
