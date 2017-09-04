@@ -22,7 +22,8 @@
 <?foreach($users as $user): extract($user);?>
               <tr>
                 <td align="left"><?=$login?></td>
-                <td align="center"><? echo ($administrator == 1) ? "Admin" : "User";?></td>
+                <td align="center"><? echo ($administrator == 1) ? "Admin" : (($administrator == 2) ? "Chancellor" : "User");?></td>
+				
                 <td align="right">
                   <a href="index.php?admin&id=<?=$id?>&action=1">
                     <img src="images/edit2.gif" border="0" title="Edit User">
