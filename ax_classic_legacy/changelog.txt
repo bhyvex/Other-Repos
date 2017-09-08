@@ -2,7 +2,8 @@ AX Classic Editor Changelog (Started May 9, 2009) --Belatedly
 |-------------------------------------------------------------|
 
 ==September 8, 2017==
-Patrikpatrik: Added NonHot toggle in Notes: located in Zone tab -> Zone Data -> Edit this Zone. NonHot = yes exclude from hotzones, Blank = No, do not exclude from hotzones.
+Patrikpatrik: Exclude or include a zone from daily Hotzones by Adding NonHot toggle.
+Patrikpatrik: Zone tab -> Zone Data -> Edit this Zone. NonHot = yes exclude from hotzones, Blank = No do not exclude from hotzones.
 
 ==September 4, 2017==
 Patrikpatrik: Added keyitem & keyitem2 columns in Misc tab Doors.
