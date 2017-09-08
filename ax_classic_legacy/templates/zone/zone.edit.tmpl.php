@@ -23,8 +23,14 @@
                
               </tr> 
               <tr>
-               <td align="left" width="30%">Note:  <br><input type="text" name="note" size="20" value="<?=$note?>"></td>
-               <td align="left" width="23%">Shutdown:  <br><input type="text" name="shutdowndelay" size="7" value="<?=$shutdowndelay?>"></td>
+               <td align="left" width="30%">
+               Note: Disable Hotzone? Blank = No, NonHot = Yes  <br>
+			   <select name="note">
+			   <option value=""<?echo ($note == 0) ? " selected" : ""?>>Blank</option>
+			   <option value="NonHot"<?echo ($note == 1) ? " selected" : ""?>>NonHot</option>
+			   </select></td>
+			   
+			   <td align="left" width="23%">Shutdown:  <br><input type="text" name="shutdowndelay" size="7" value="<?=$shutdowndelay?>"></td>
                <td align="left" width="23%">Graveyard: <br><input type="text" name="graveyard_id" size="7" value="<?=$graveyard_id?>"></td>
                <td align="left" width="24%">Zone Type: <br><input type="text" name="ztype" size="7" value="<?=$ztype?>"></td>
              </tr>
