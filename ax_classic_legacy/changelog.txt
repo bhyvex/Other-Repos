@@ -1,6 +1,10 @@
 AX Classic Editor Changelog (Started May 9, 2009) --Belatedly
 |-------------------------------------------------------------|
 
+==September 15, 2017==
+Patrikpatrik: Added Petitions tab (for titanium clients). Admins/GMs can view & remove petitions sorted by latest date.
+Patrikpatrik: Admins/GMs can update GMtext for other GM's to see.
+
 ==September 8, 2017==
 Patrikpatrik: Exclude or include a zone from daily Hotzones by Adding NonHot toggle.
 Patrikpatrik: Zone tab -> Zone Data -> Edit this Zone. NonHot = yes exclude from hotzones, Blank = No do not exclude from hotzones.
