@@ -45,6 +45,9 @@ switch ($editor) {
   case 'keys':
     $breadcrumbs = "Player Keys";
     break;
+  case 'petitions':
+    $breadcrumbs = "Player Petitions";
+	break;
 
 }
 
