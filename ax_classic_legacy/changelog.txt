@@ -1,6 +1,13 @@
 AX Classic Editor Changelog (Started May 9, 2009) --Belatedly
 |-------------------------------------------------------------|
 
+==September 17, 2017==
+Patrikpatrik: Restored View Hackers section, Hacker Details, & Deletion entry button.
+Patrikpatrik: Added extra column to preview hack before Hacker Details.
+Patrikpatrik: Entries ordered by latest date in descending order.
+Patrikpatrik: Fixed breadcrumbs issue in Hacker Details
+Patrikpatrik: Fixed headers to properly display page(s).
+
 ==September 15, 2017==
 Patrikpatrik: Added Petitions tab (for titanium clients). Admins/GMs can view & remove petitions sorted by latest date.
 Patrikpatrik: Admins/GMs can update GMtext for other GM's to see.
