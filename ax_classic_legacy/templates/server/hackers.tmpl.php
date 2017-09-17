@@ -17,7 +17,7 @@
           <td align="center" width="5%"><strong>Name</strong></td>
           <td align="center" width="5%"><strong>Zone</strong></td>
           <td align="center" width="15%"><strong>Date</strong></td>
-		  <td align="center" width="15%"><strong>Hack</strong></td>
+		  <td align="center" width="15%"><strong>Preview</strong></td>
           <th width="5%"></th>
          </tr>
       <?$x=0; foreach($hackers as $hackers=>$v):?>

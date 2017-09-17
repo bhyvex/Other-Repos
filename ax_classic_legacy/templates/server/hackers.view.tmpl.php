@@ -28,7 +28,7 @@
         </table>
         </fieldset><br>
          <fieldset>
-         <legend><strong>Hack Notes</strong></legend>
+         <legend><strong>Hack</strong></legend>
          <table width="100%">
          <tr>
          <td align="center" width="100%"><?=$hacked?></td>
