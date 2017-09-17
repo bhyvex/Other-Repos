@@ -195,8 +195,9 @@ switch ($action) {
     add_start_zones_id();
     header("Location: index.php?editor=server&action=12");
     exit;
-   case 18: // Preview Hackers
+   case 18: // Preview Hackers Refer to case 24 for Hacker Details
     check_admin_authorization();
+	$breadcrumbs = "Possible Hackers";
     $body = new Template("templates/server/hackers.tmpl.php");
     $hackers = get_hackers();
     if ($hackers) {
@@ -245,7 +246,17 @@ switch ($action) {
        }
      }
     break;
-
+   case 24: // Hacker Details Refer to case 18
+    check_admin_authorization();
+    $breadcrumbs =  "<a href='index.php?editor=server&action=18'>" . "Possible Hackers</a> >> Hacker Details";
+    $body = new Template("templates/server/hackers.view.tmpl.php");
+    $hackers = view_hackers();
+    if ($hackers) {
+      foreach ($hackers as $key=>$value) {
+        $body->set($key, $value);
+       }
+     }
+    break;
 }
 
 function get_bugs() {
@@ -464,7 +475,7 @@ function add_start_zones_id() {
 function get_hackers() {
   global $mysql;
 
-  $query = "SELECT id, account, name, hacked, zone, date FROM hackers limit 500";
+  $query = "SELECT id, account, name, hacked, zone, date FROM hackers ORDER BY date DESC limit 500";
   $result = $mysql->query_mult_assoc($query);
   if ($result) {
     foreach ($result as $result) {
