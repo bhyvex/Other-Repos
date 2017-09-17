@@ -17,6 +17,7 @@
           <td align="center" width="5%"><strong>Name</strong></td>
           <td align="center" width="5%"><strong>Zone</strong></td>
           <td align="center" width="15%"><strong>Date</strong></td>
+		  <td align="center" width="15%"><strong>Hack</strong></td>
           <th width="5%"></th>
          </tr>
       <?$x=0; foreach($hackers as $hackers=>$v):?>
@@ -25,9 +26,10 @@
           <td align="center" width="5%"><?=$v['account']?></td>
           <td align="center" width="5%"><?=$v['name']?></td>  
           <td align="center" width="5%"><?=$v['zone']?></td>
-          <td align="center" width="15%"><?=$v['date']?></td>
+          <td align="center" width="15%"><?=date("Y M d", strtotime($v['date'])) . "&nbsp;&nbsp;" . date("g:ia", strtotime($v['date']))?></td>
+		  <td align="center" width="15%"><a><?=substr($v['hacked'], 0, 23)?></a></td>
           <td align="right">      
-            <a href="index.php?editor=server&hid=<?=$v['hid']?>&action=8"><img src="images/edit2.gif" border="0" title="View Hacker"></a>            
+            <a href="index.php?editor=server&hid=<?=$v['hid']?>&action=24"><img src="images/edit2.gif" border="0" title="Hacker Details"></a>            
             <a onClick="return confirm('Really Delete Entry <?=$v['hid']?>?');" href="index.php?editor=server&hid=<?=$v['hid']?>&action=7"><img src="images/remove3.gif" border="0" title="Delete this entry"></a>
          </td>
        </tr>

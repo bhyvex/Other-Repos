@@ -23,12 +23,12 @@
 	 <td align="center" width="5%"><?=$account?></td>
 	 <td align="center" width="5%"><?=$name?></td>  
 	 <td align="center" width="5%"><?=$zone?></td>
-	 <td align="center" width="15%"><?=$date?></td>     
+	 <td align="center" width="15%"><?=date("Y M d", strtotime($date)) . "&nbsp;&nbsp;" . date("g:ia", strtotime($date))?></td>     
         </tr>
         </table>
         </fieldset><br>
          <fieldset>
-         <legend><strong>Text</strong></legend>
+         <legend><strong>Hack Notes</strong></legend>
          <table width="100%">
          <tr>
          <td align="center" width="100%"><?=$hacked?></td>
