@@ -2,7 +2,7 @@ AX Classic Editor Changelog (Started May 9, 2009) --Belatedly
 |-------------------------------------------------------------|
 
 ==September 17, 2017==
-Patrikpatrik: Restored View Hackers section, Hacker Details, & Deletion entry button.
+Patrikpatrik: Restored View Hackers section, Hacker Details, & Deletion entry button. Navigate to Server tab->View Hackers.
 Patrikpatrik: Added extra column to preview hack before Hacker Details.
 Patrikpatrik: Entries ordered by latest date in descending order.
 Patrikpatrik: Fixed breadcrumbs issue in Hacker Details
