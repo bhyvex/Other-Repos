@@ -30,7 +30,7 @@
 		  <td align="center" width="15%"><a><?=substr($v['hacked'], 0, 23)?></a></td>
           <td align="right">      
             <a href="index.php?editor=server&hid=<?=$v['hid']?>&action=24"><img src="images/edit2.gif" border="0" title="Hacker Details"></a>            
-            <a onClick="return confirm('Really Delete Entry <?=$v['hid']?>?');" href="index.php?editor=server&hid=<?=$v['hid']?>&action=7"><img src="images/remove3.gif" border="0" title="Delete this entry"></a>
+            <a onClick="return confirm('Really Delete Entry <?=$v['hid']?>?');" href="index.php?editor=server&hid=<?=$v['hid']?>&action=19"><img src="images/remove3.gif" border="0" title="Delete this entry"></a>
          </td>
        </tr>
         <?$x++; endforeach;?>
