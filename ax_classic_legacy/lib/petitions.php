@@ -1,6 +1,6 @@
 <?
  switch ($action) {
-	case 0; // View petitions
+	case 0: // View petitions
 		check_admin_authorization();
 		$body = new Template("templates/petitions/petition.tmpl.php");
 		#$body = new Template("templates/server/server.default.tmpl.php");
