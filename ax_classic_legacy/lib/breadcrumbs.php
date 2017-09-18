@@ -48,7 +48,9 @@ switch ($editor) {
   case 'petitions':
     $breadcrumbs = "Player Petitions";
 	break;
-
+  case 'events':
+    $breadcrumbs = "List of Events in DB";
+	break;
 }
 
 if ($z != '') $breadcrumbs .= " >> " . getZoneLongName($z);
