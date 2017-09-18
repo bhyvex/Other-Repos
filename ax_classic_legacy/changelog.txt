@@ -1,6 +1,14 @@
 AX Classic Editor Changelog (Started May 9, 2009) --Belatedly
 |-------------------------------------------------------------|
 
+==September 18, 2017==
+Patrikpatrik: Added Events Tab.
+Patrikpatrik: Pulls all event questglobals and its current values.
+Patrikpatrik: Header will tell you if an Event is active.
+Patrikpatrik: Can activate an Event.
+Patrikpatrik: Can terminate all events.
+Patrikpatrik: Adding an event will automatically increment as safecheck to avoid problems with duplicates.
+
 ==September 17, 2017==
 Patrikpatrik: Restored View Hackers section, Hacker Details, & Deletion entry button. Navigate to Server tab->View Hackers.
 Patrikpatrik: Added extra column to preview hack before Hacker Details.
