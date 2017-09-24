@@ -16,9 +16,9 @@
 		break;
  }
  function get_cash_totals() {
-	$HOSTNAME2 = "localhost";
-	$USERNAME2 = "root";
-	$PASSWORD2 = "eqemu";
+	$HOSTNAME2 = "192.168.2.148";
+	$USERNAME2 = "eq";
+	$PASSWORD2 = "lansing222";
 	$DATABASE2 = "polls";
 	$CON2 = mysqli_connect($HOSTNAME2, $USERNAME2, $PASSWORD2, $DATABASE2);
 	$query = "SELECT FORMAT(SUM(platinum) + SUM(platinum_bank), 0) AS 'platinum' FROM wealthiest";
