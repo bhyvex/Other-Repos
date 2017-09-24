@@ -1,7 +1,7 @@
        <center>
         <div class="page_title"><span><br>AX-Classic Online Editing Interface</span></div>
         <img src="images/dontpanic.jpg">
-        <div class="page_title"><span>Boomba The Big Revised: September 18, 2017</span></div>
+        <div class="page_title"><span>Boomba The Big Revised: September 24, 2017</span></div>
        <p class="editor">
 	   <?php
 			error_reporting(E_ALL); //(E_ALL, 0)
