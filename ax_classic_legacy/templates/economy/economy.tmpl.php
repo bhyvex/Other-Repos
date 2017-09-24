@@ -3,7 +3,7 @@
     <div class="table_header">
       <table width="100%" cellpadding="0" cellspacing="0">
         <tr>
-          <td align="left">Server Economy (Last checked 9/24/2017)</td>
+          <td align="left">Server Economy (Last decoded 9/24/2017)</td>
         </tr>
       </table>
     </div>
