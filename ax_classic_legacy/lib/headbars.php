@@ -117,6 +117,9 @@ switch ($editor) {
   case 'Events':
 	$body = $body;
 	break;
+  case 'economy':
+    $body = $body;
+	break;
 }
 
 function build_tabs () {
@@ -138,6 +141,7 @@ function build_tabs () {
   $tabstatus14 = "off";
   $tabstatus15 = "off";
   $tabstatus16 = "off";
+  $tabstatus17 = "off";
   
   $url = '';
   if ($z) $url = $url . "&z=$z";
@@ -195,6 +199,9 @@ function build_tabs () {
 	case 'events':
 	  $tabstatus16 = "on";
 	  break;
+	case 'economy':
+	  $tabstatus17 = "on";
+	  break;
   }
 
   $admin = '';
@@ -221,7 +228,8 @@ function build_tabs () {
         <div class=\"$tabstatus13\"><a href=\"index.php?editor=items$url\">Items Editor</a></div>
 		<div class=\"$tabstatus14\"><a href=\"index.php?editor=keys\">Keys</a></div>
         <div class=\"$tabstatus15\"><a href=\"index.php?editor=petitions\">Petitions</a></div>
-		<div class=\"$tabstatus16\"><a href=\"index.php?editor=events\">Events</a></div><br>
+		<div class=\"$tabstatus16\"><a href=\"index.php?editor=events\">Events</a></div>
+		<div class=\"$tabstatus17\"><a href=\"index.php?editor=economy\">Economy</a></div><br>
 		<div style=\"float: right;\">$admin<a href=\"index.php?logout\">Logout</a></div>
         <div style=\"float: right; width: 270px; color:rgb(120,0,0); font-size: .85em; text-decoration: blink;\">$serverName Database</a></div>
 

@@ -51,6 +51,9 @@ switch ($editor) {
   case 'events':
     $breadcrumbs = "List of Events in DB";
 	break;
+  case 'economy':
+    $breadcrumbs = "Server Economy";
+	break;
 }
 
 if ($z != '') $breadcrumbs .= " >> " . getZoneLongName($z);
