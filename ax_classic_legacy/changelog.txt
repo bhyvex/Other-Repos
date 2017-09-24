@@ -1,6 +1,14 @@
 AX Classic Editor Changelog (Started May 9, 2009) --Belatedly
 |-------------------------------------------------------------|
 
+==September 24, 2017==
+Patrikpatrik: Added Economy tab.
+Patrikpatrik: Examined profile Blob in character_ to pull certain data that is not stored in the db.
+Patrikpatrik: Data is read only, cannot be altered or modified.
+Patrikpatrik: View total money on Rathe.
+Patrikpatrik: View top wealthiest players on Rathe.
+Patrikpatrik: Parsing is not dynamic and manually updated occasionally.
+
 ==September 18, 2017==
 Patrikpatrik: Added Events Tab.
 Patrikpatrik: Pulls all event questglobals and its current values.
