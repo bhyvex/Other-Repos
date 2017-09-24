@@ -89,6 +89,9 @@ switch ($editor) {
   case 'events':
     require_once('lib/events.php');
 	break;
+  case 'economy':
+    require_once('lib/economy.php');
+	break;
 }
 
 $tmpl->set('javascript', $javascript);
