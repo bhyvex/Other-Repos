@@ -55,7 +55,7 @@ function get_monitor() {
   return $array;
 }
 function get_ips($x) {
-	$HOSTNAME = "192.168.2.125";
+	$HOSTNAME = "localhost";
 	$USERNAME = "eq";
 	$PASSWORD = "lansing222";
 	$DATABASE = "ax_classic";
