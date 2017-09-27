@@ -55,9 +55,9 @@ function get_monitor() {
   return $array;
 }
 function get_ips($x) {
-	$HOSTNAME = "localhost";
-	$USERNAME = "root";
-	$PASSWORD = "eqemu";
+	$HOSTNAME = "192.168.2.125";
+	$USERNAME = "eq";
+	$PASSWORD = "lansing222";
 	$DATABASE = "ax_classic";
 	$CON = mysqli_connect($HOSTNAME, $USERNAME, $PASSWORD, $DATABASE);
 	$query = "SELECT ip FROM account_ip where accid = '$x' ORDER BY lastused DESC LIMIT 1";
