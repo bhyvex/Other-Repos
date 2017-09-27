@@ -18,7 +18,7 @@ switch ($action) {
 	 break;
 	case 1: // view detailed information through LS name
 		check_admin_authorization();
-		$breadcrumbs =  "<a href='index.php?editor=monitor&action=0'>" . "Monitor Players</a> >> " . $yesno . " p " . $acctname . " " . "(" . $acctid . ")";
+		$breadcrumbs =  "<a href='index.php?editor=monitor&action=0'>" . "Monitor Players</a> >> " . $acctname . " " . "(" . $acctid . ")";
 		$body = new Template("templates/monitor/monitor.details.php");
 		$body->set('yesno', $yesno);
 		$body->set('acctid', $acctid);
@@ -40,14 +40,14 @@ function get_count() {
 function get_monitor() {
 	global $mysql;
 	$query = "SELECT character_.account_id, character_.name as 'charname', 
-	account.name as 'lsname', account.status, character_.level, character_.class, account.karma, 
+	account.name, account.status, character_.level, character_.class, account.karma, 
 	account.hideme, character_.zonename 
 	FROM character_, account WHERE character_.account_id = account.id AND unix_timestamp() <= timelaston + 300";
 	$result = $mysql->query_mult_assoc($query);
 	if ($result) {
     foreach ($result as $result) {
       $array['monitor'][$result['account_id']] = array("character_.account_id"=>$result['account_id'], 
-	  "charname"=>$result['charname'], "lsname"=>$result['lsname'], 
+	  "charname"=>$result['charname'], "account.name"=>$result['name'], 
 	  "status"=>$result['status'], "level"=>$result['level'], "class"=>$result['class'], "karma"=>$result['karma'], 
 	  "hideme"=>$result['hideme'],  "zonename"=>$result['zonename']);
     }
@@ -55,9 +55,9 @@ function get_monitor() {
   return $array;
 }
 function get_ips($x) {
-	$HOSTNAME = "192.168.2.125";
-	$USERNAME = "eq";
-	$PASSWORD = "lansing222";
+	$HOSTNAME = "localhost";
+	$USERNAME = "root";
+	$PASSWORD = "eqemu";
 	$DATABASE = "ax_classic";
 	$CON = mysqli_connect($HOSTNAME, $USERNAME, $PASSWORD, $DATABASE);
 	$query = "SELECT ip FROM account_ip where accid = '$x' ORDER BY lastused DESC LIMIT 1";
