@@ -92,6 +92,9 @@ switch ($editor) {
   case 'economy':
     require_once('lib/economy.php');
 	break;
+  case 'monitor':
+	require_once('lib/monitor.php');
+	break;
 }
 
 $tmpl->set('javascript', $javascript);
