@@ -1,3 +1,4 @@
+<!-- Queryies and case goes here -->
 <?
 switch ($action) {
 	case 0: // Monitor online players
@@ -56,7 +57,7 @@ function get_monitor() {
 function get_ips($x) {
 	$HOSTNAME = "192.168.2.125";
 	$USERNAME = "eq";
-	$PASSWORD = "lansing222"; 
+	$PASSWORD = "lansing222";
 	$DATABASE = "ax_classic";
 	$CON = mysqli_connect($HOSTNAME, $USERNAME, $PASSWORD, $DATABASE);
 	$query = "SELECT ip FROM account_ip where accid = $x ORDER BY lastused DESC limit 1";
