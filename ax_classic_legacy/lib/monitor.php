@@ -60,7 +60,7 @@ function get_ips($x) {
 	$PASSWORD = "lansing222";
 	$DATABASE = "ax_classic";
 	$CON = mysqli_connect($HOSTNAME, $USERNAME, $PASSWORD, $DATABASE);
-	$query = "SELECT ip FROM account_ip where accid = $x ORDER BY lastused DESC limit 1";
+	$query = "SELECT ip FROM account_ip where accid = '$x' ORDER BY lastused DESC limit 1";
 	$result = mysqli_query($CON, $query);
 	$row = mysqli_fetch_array($result);
 	return $row;
