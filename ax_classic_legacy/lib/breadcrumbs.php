@@ -54,6 +54,9 @@ switch ($editor) {
   case 'economy':
     $breadcrumbs = "Server Economy";
 	break;
+  case 'monitor':
+	$breadcrumbs = "Monitor Players";
+	break;
 }
 
 if ($z != '') $breadcrumbs .= " >> " . getZoneLongName($z);
