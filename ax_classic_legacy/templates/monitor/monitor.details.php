@@ -2,7 +2,7 @@
     <div class="table_header">
       <div style="float:right">
       </div>
-	  <?=$id?> - <?echo trim($name);?>
+	  <?=$id?> - <?echo trim($name)?>
     </div>
     <div class="table_content">
       <table cellspacing="0" border="0" width="100%">
@@ -36,6 +36,7 @@
                         <td width="20%"><center><b>Login Count</b></center></td>
                         <td width="40%"><center><b>Last Login</b></center></td>
                       </tr>
+
 <?
   if ($ips) {
     foreach ($ips as $ip_address) {
