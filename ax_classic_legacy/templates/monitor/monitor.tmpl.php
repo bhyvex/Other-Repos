@@ -33,9 +33,8 @@
             </tr>
 <?if ($players > 0):?>
 <?foreach($monitor as $monitor=>$v):?>
-<?$acctid = $v['character_.account_id'];
-//$acctname = $v['name'];
-$getips = get_ips($acctid);
+<?$accid = $v['character_.account_id'];
+$getips = get_ips($accid);
 $classid = $v['character_.class'];
 $getclass = get_classes($classid);
 
