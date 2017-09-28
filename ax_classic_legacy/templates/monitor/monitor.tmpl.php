@@ -36,21 +36,21 @@
 <?$acctid = $v['character_.account_id'];
 //$acctname = $v['name'];
 $getips = get_ips($acctid);
-$classid = $v['class'];
+$classid = $v['character_.class'];
 $getclass = get_classes($classid);
 
 ?>
             <tr bgcolor="#<? echo ($x % 2 == 0) ? "BBBBBB" : "AAAAAA";?>">
               <td align="center" width="10%"><?=$v['character_.account_id']?></td>
               <td align="center" width="10%"><?=$getips['ip'];?></td>
-              <td align="center" width="10%"><?=$v['charname']?></td>
+              <td align="center" width="10%"><?=$v['character_.name']?></td>
               <td align="center" width="10%"><a href="index.php?editor=monitor&acctid=<?=$v['character_.account_id']?>&acctname=<?=$v['account.name']?>&action=1"><?=$v['account.name']?></a></td>
-              <td align="center" width="5%"><?=$v['status']?></td>
-              <td align="center" width="5%"><?=$v['level']?></td>
+              <td align="center" width="5%"><?=$v['account.status']?></td>
+              <td align="center" width="5%"><?=$v['character_.level']?></td>
               <td align="center" width="10%"><?=$getclass?></td>
-              <td align="center" width="5%"><?=$v['karma']?></td>
-			  <td align="center" width="7%"><?=$v['hideme']?></td>
-			  <td align="center" width="7%"><?=$v['zonename']?></td>
+              <td align="center" width="5%"><?=$v['account.karma']?></td>
+			  <td align="center" width="7%"><?=$v['account.hideme']?></td>
+			  <td align="center" width="7%"><?=$v['character_.zonename']?></td>
 			</tr>
 
 <?endforeach;// Closure from line 37?>
