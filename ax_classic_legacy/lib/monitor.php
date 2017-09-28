@@ -18,11 +18,11 @@ switch ($action) {
 	 break;
 	case 1: // view detailed information through LS name
 		check_admin_authorization();
-		$breadcrumbs =  "<a href='index.php?editor=monitor&action=0'>" . "Monitor Players</a> >> " . $acctname . " " . "(" . $acctid . ")";
+		$breadcrumbs =  "<a href='index.php?editor=monitor&action=0'>" . "Monitor Players</a> >> " . $yesno . " p " . $acctname . " " . "(" . $acctid . ")";
 		$body = new Template("templates/monitor/monitor.details.php");
-		$body->set('yesno', $yesno);
 		$body->set('acctid', $acctid);
 		$body->set('acctname', $acctname);
+		$body->set('yesno', $yesno);
 		$accounts = account_details($acctid);
 		if ($accounts) {
 			foreach ($accounts as $key=>$value) {
