@@ -1,4 +1,3 @@
-<!-- Queryies and case goes here -->
 <?
 switch ($action) {
 	case 0: // Monitor online players
@@ -18,15 +17,11 @@ switch ($action) {
 	 break;
 	case 1: // view detailed information through LS name
 		check_admin_authorization();
-		#$key_item = key_item_details($_GET['playerid'], $_GET['item_id']);
 		$accounts = account_details($_GET['accountid']);
-		$breadcrumbs =  "<a href='index.php?editor=monitor&action=0'>" . "Monitor Players</a> >> " . $_GET['accountname'] . " " . "(" . $accountid . ")";
+		$breadcrumbs =  "<a href='index.php?editor=monitor&action=0'>" . "Monitor Players</a> >> " . $_GET['accountname'] . " " . "(" . $_GET['accountid'] . ")";
 		$body = new Template("templates/monitor/monitor.details.php");
-		#$body->set('accid', $accid);
-		#$body->set('acctname', $acctname);
 		$body->set("accounts", $accounts);
 		$body->set('yesno', $yesno);
-		#$accounts = account_details($accountid);
 		if ($accounts) {
 			foreach ($accounts as $key=>$value) {
 				$body->set($key, $value);
@@ -85,7 +80,6 @@ for($i = 0; $i < sizeof($classes); $i++) {
   $account_array = array();
   $character_array = array();
   $ip_array = array();
-  #$char_count = 0;
   $query = "SELECT * FROM account WHERE id= '$z'";
   $account_array = $mysql->query_assoc($query);
 
@@ -102,7 +96,6 @@ for($i = 0; $i < sizeof($classes); $i++) {
   if ($ip_array) {
     $account_array['ips'] = $ip_array;
   }
-  #echo "hello ipa <br> " . $account_array['characters'][$character_array['name']];
   return $account_array;
 }
 ?>
