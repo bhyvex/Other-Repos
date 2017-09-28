@@ -5,6 +5,8 @@ AX Classic Editor Changelog (Started May 9, 2009) --Belatedly
 Patrikpatrik: Added Monitor tab for any unusual activity in game.
 Patrikpatrik: Clicking on LS name will show account info + all characters tied to that account.
 Patrikpatrik: All Ip info associated with account will also be listed, along with number count and last login.
+Patrikpatrik: Cleaned up old petitions.
+Patrikpatrik: Cleaned up old hacker details in Server tab->View Hackers.
 
 ==September 24, 2017==
 Patrikpatrik: Added Economy tab.
