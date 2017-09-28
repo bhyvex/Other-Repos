@@ -43,7 +43,7 @@ $getclass = get_classes($classid);
               <td align="center" width="10%"><?=$v['character_.account_id']?></td>
               <td align="center" width="10%"><?=$getips['ip'];?></td>
               <td align="center" width="10%"><?=$v['character_.name']?></td>
-              <td align="center" width="10%"><a href="index.php?editor=monitor&acctid=<?echo $v['character_.account_id'];?>&action=1"><?=$v['account.name']?></a></td>
+              <td align="center" width="10%"><a href="index.php?editor=monitor&acctid=<?=$v['character_.account_id']?>&action=1"><?=$v['account.name']?></a></td>
               <td align="center" width="5%"><?=$v['account.status']?></td>
               <td align="center" width="5%"><?=$v['character_.level']?></td>
               <td align="center" width="10%"><?=$getclass?></td>
