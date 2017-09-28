@@ -18,7 +18,7 @@ switch ($action) {
 	 break;
 	case 1: // view detailed information through LS name
 		check_admin_authorization();
-		$breadcrumbs =  "<a href='index.php?editor=monitor&action=0'>" . "Monitor Players</a> >> " . $yesno . " p " . $acctname . " " . "(" . $acctid . ")";
+		$breadcrumbs =  "<a href='index.php?editor=monitor&action=0'>" . "Monitor Players</a> >> " . $yesno . " q " . $acctname . " " . "(" . $acctid . ")";
 		$body = new Template("templates/monitor/monitor.details.php");
 		$body->set('acctid', $acctid);
 		$body->set('acctname', $acctname);
@@ -85,20 +85,21 @@ for($i = 0; $i < sizeof($classes); $i++) {
   $char_count = 0;
   $query = "SELECT * FROM account WHERE id= '$acctid'";
   $account_array = $mysql->query_assoc($query);
-
+	echo "hello aa <br>" ;
   //Load character names
   $query = "SELECT id, account_id, class, name FROM character_ WHERE account_id = '$acctid'";
   $character_array = $mysql->query_mult_assoc($query);
   if ($character_array) {
     $account_array['characters'] = $character_array;
   }
-
+echo "hello ca <br>";
   //Load ip info
   $query = "SELECT * FROM account_ip WHERE accid = '$acctid'";
   $ip_array = $mysql->query_mult_assoc($query);
   if ($ip_array) {
     $account_array['ips'] = $ip_array;
   }
+  echo "hello ipa <br> " . $account_array['name'];
   return $account_array;
 }
 ?>
