@@ -23,7 +23,7 @@ switch ($action) {
 		$body->set('yesno', $yesno);
 		$body->set('acctid', $acctid);
 		$body->set('acctname', $acctname);
-		$accounts = account_details();
+		$accounts = account_details($acctid);
 		if ($accounts) {
 			foreach ($accounts as $key=>$value) {
 				$body->set($key, $value);
@@ -47,9 +47,9 @@ function get_monitor() {
 	if ($result) {
     foreach ($result as $result) {
       $array['monitor'][$result['account_id']] = array("character_.account_id"=>$result['account_id'], 
-	  "charname"=>$result['charname'], "account.name"=>$result['name'], 
-	  "status"=>$result['status'], "level"=>$result['level'], "class"=>$result['class'], "karma"=>$result['karma'], 
-	  "hideme"=>$result['hideme'],  "zonename"=>$result['zonename']);
+	  "character_.name"=>$result['charname'], "account.name"=>$result['name'], 
+	  "account.status"=>$result['status'], "character_.level"=>$result['level'], "character_.class"=>$result['class'], "account.karma"=>$result['karma'], 
+	  "account.hideme"=>$result['hideme'],  "character_.zonename"=>$result['zonename']);
     }
   }
   return $array;
@@ -77,9 +77,8 @@ for($i = 0; $i < sizeof($classes); $i++) {
 }
 	return $y;
 }
- function account_details() {
+ function account_details($acctid) {
   global $mysql;
-  global $acctid;
   $account_array = array();
   $character_array = array();
   $ip_array = array();
