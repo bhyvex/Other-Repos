@@ -20,8 +20,10 @@ $blockedtype = array(
 
 switch ($action) {
   case 0:
-    if (!$z) {
-    }
+    if (!$z) { // this portion should have a complete list and afterwards specific based upon zone selection
+		$body = new Template("templates/zone/zone.default.complete.graveyard.tmpl.php");
+		$body->set('currzone', $z);
+	}
     else {
         $body = new Template("templates/zone/zone.default.tmpl.php");
         $body->set('currzone', $z);
@@ -107,6 +109,7 @@ switch ($action) {
     header("Location: index.php?editor=zone&z=$z&graveyard_id=$graveyard_id&action=4");
     exit;
    case 10: // View graveyard data
+    check_authorization();
     $body = new Template("templates/zone/graveyard.view.tmpl.php");
     $body->set('currzone', $z);
     $graveyard = graveyard_info();
@@ -236,6 +239,7 @@ function get_graveyard() {
   $result = $mysql->query_assoc($query);
 
   return $result;
+  
 }
 
 function get_zonepoints() {
@@ -523,10 +527,15 @@ function add_blockedspell() {
 }
 
 function graveyard_info() {
-  global $mysql;
+  global $mysql, $z;
+  $zid = getZoneID($z);
   $array = array();
+  if(!$z) {
+	  $query = "SELECT * FROM graveyard";
+  } else {
+	  $query = "SELECT * FROM graveyard WHERE zone_id=\"$zid\"";
+  }
   
-  $query = "SELECT * FROM graveyard";
   $result = $mysql->query_mult_assoc($query);
   if ($result) {
     foreach ($result as $result) {
