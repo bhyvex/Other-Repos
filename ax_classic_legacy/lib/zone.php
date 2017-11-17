@@ -23,10 +23,16 @@ switch ($action) {
     if (!$z) { // this portion should have a complete list and afterwards specific based upon zone selection
 		$body = new Template("templates/zone/zone.default.complete.graveyard.tmpl.php");
 		$body->set('currzone', $z);
+		$zid = getZoneID($z);
+		echo "z is " . $z;
+		echo "<br> zid is " . $zid;
 	}
     else {
         $body = new Template("templates/zone/zone.default.tmpl.php");
         $body->set('currzone', $z);
+		$zid = getZoneID($z);
+		echo "z is " . $z;
+		echo "<br> zid is " . $zid;
     }
     break;
   case 1: // View zone data
@@ -346,7 +352,7 @@ function update_zone () {
   }
 }
 
-function update_graveyard() {
+function update_graveyard() { // needs to also update zone graveyard_id as well.
   global $mysql;
 
   $zone_id = $_POST['zone_id'];
@@ -358,6 +364,9 @@ function update_graveyard() {
   $heading = $_POST['heading'];
 
   $query = "UPDATE graveyard SET zone_id=\"$zone_id\", x=\"$x\", y=\"$y\", z=\"$z_coord\", heading=\"$heading\" WHERE id=\"$graveyard_id\"";
+  $mysql->query_no_result($query);
+  
+  $query = "UPDATE zone SET graveyard_id=\"$graveyard_id\" WHERE zoneidnumber=\"$zone_id\"";
   $mysql->query_no_result($query);
 }
 
@@ -481,7 +490,7 @@ function add_graveyard() {
   $query = "INSERT INTO graveyard SET id=\"$graveyard_id\", zone_id=\"$zone_id\", x=\"$x\", y=\"$y\", z=\"$z_coord\", heading=\"$heading\"";
   $mysql->query_no_result($query);
 
-  $query = "UPDATE zone SET graveyard_id=\"$graveyard_id\" WHERE zoneidnumber=\"$zid\"";
+  $query = "UPDATE zone SET graveyard_id=\"$graveyard_id\" WHERE zoneidnumber=\"$zone_id\"";
   $mysql->query_no_result($query);
 }
 
