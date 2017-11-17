@@ -1,6 +1,6 @@
 <div class="edit_form" style="width: 450px">
       <div class="edit_form_header">
-        Edit Graveyard: <?=$id?>
+        Edit Graveyard: <?=$id?>, Zone Name :<?=getZoneName($zone_id)?>
       </div>
 
       <div class="edit_form_content">
