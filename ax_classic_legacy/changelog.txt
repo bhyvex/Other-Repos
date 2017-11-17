@@ -3,6 +3,7 @@ AX Classic Editor Changelog (Started May 9, 2009) --Belatedly
 == November 17, 2017==
 Patrikpatrik: Specified Graveyard list selection upon zone selection.
 Patrikpatrik: Can view complete list separately & add Graveyard data in 'Zone' tab.
+Patrikpatrik: Editing or Adding Graveyard List entry will properly update GY columns for both tables.
 
 == September 27, 2017==
 Patrikpatrik: Added Monitor tab for any unusual activity in game.
