@@ -3,12 +3,14 @@
         <table width="100%" cellpadding="0" cellspacing="0">
           <tr>
            <td>Graveyard List</a></td>
-           
+           <td align="right">    
+           <a href="index.php?editor=zone&z=<?=$currzone?>&action=8"><img src="images/add.gif" border="0" title="Add Graveyard Data"></a>
            </tr>        
          </table>
       </div>
 
        <table class="table_content2" width="100%">
+<? if (isset($graveyard)):?>
          <tr>
           <td align="center" width="5%"><strong>ID</strong></td>
           <td align="center" width="12%"><strong>Zone</strong></td>
@@ -31,5 +33,11 @@
           <a onClick="return confirm('Really Delete Graveyard <?=$v['graveyard_id']?>?');" href="index.php?editor=zone&z=<?=$currzone?>&graveyard_id=<?=$v['graveyard_id']?>&action=11"><img src="images/remove3.gif" border="0" title="Delete this Graveyard"></a>
             </td>
         </tr>
-<?$x++; endforeach;?>
-        
+		<?$x++; endforeach;?>
+		</table>
+		<?endif;?>
+ <? if (!isset($graveyard)):?>
+        <tr>
+          <td align="left" width="100" style="padding: 10px;">No graveyard in <?=$currzone?> found!</td>
+        </tr>
+<?endif;?>       
