@@ -23,16 +23,11 @@ switch ($action) {
     if (!$z) { // this portion should have a complete list and afterwards specific based upon zone selection
 		$body = new Template("templates/zone/zone.default.complete.graveyard.tmpl.php");
 		$body->set('currzone', $z);
-		$zid = getZoneID($z);
-		echo "z is " . $z;
-		echo "<br> zid is " . $zid;
 	}
     else {
         $body = new Template("templates/zone/zone.default.tmpl.php");
         $body->set('currzone', $z);
 		$zid = getZoneID($z);
-		echo "z is " . $z;
-		echo "<br> zid is " . $zid;
     }
     break;
   case 1: // View zone data
