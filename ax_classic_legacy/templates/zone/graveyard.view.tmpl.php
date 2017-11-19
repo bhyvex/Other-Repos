@@ -2,7 +2,19 @@
       <div class="table_header">
         <table width="100%" cellpadding="0" cellspacing="0">
           <tr>
-           <td>Graveyard List</a></td>
+           <td>Graveyard List
+		   <?if(isset($graveyard)) {
+				foreach($graveyard as $hraveyard=>$w) {
+					$gid = $w['graveyard_id'];
+						if(sizeof($graveyard) > 1) {
+							// Blank!
+						} else {
+						 $associated = get_alternate_gyzone($gid);
+					}
+				}
+		   }
+		   ?>
+		   </td>
            <td align="right">    
            <a href="index.php?editor=zone&z=<?=$currzone?>&action=8"><img src="images/add.gif" border="0" title="Add Graveyard Data"></a>
            </tr>        
@@ -35,9 +47,20 @@
         </tr>
 		<?$x++; endforeach;?>
 		</table>
-		<?endif;?>
- <? if (!isset($graveyard)):?>
+		
+<? elseif (isset($associatedgy)):?>
+		<?foreach($associatedgy as $associatedgy=>$h) {
+			$gyid = $h['assocgy_id'];
+		}
+		 $comparison = get_alternate_gyzone($gyid);
+		?>
+        <tr>
+          <td align="left" width="100" style="padding: 10px;">No graveyard in <?=$currzone?> exists However this Graveyard_id <a href="index.php?editor=zone&z=<?=$currzone?>&action=1"><?=$gyid?></a> is associated with <a href="index.php?editor=zone&z=<?=getZoneName($comparison)?>&action=1"><?=getZoneName($comparison)?></a>.</td>
+        </tr>
+		</table>
+ <? elseif (!isset($graveyard)):?>
         <tr>
           <td align="left" width="100" style="padding: 10px;">No graveyard in <?=$currzone?> found!</td>
         </tr>
+		</table>
 <?endif;?>       
