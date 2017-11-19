@@ -59,7 +59,7 @@ switch ($editor) {
 	break;
 }
 
-if ($z != '') $breadcrumbs .= " >> " . getZoneLongName($z);
+if ($z != '') $breadcrumbs .= " >> " . getZoneLongName($z) . "  (" . $z . ")";
 if ($npcid != '' && $npcid != 'ID') $breadcrumbs .= " >> " . getNPCName($npcid) . " ($npcid)";
 if ($fid != '') $breadcrumbs .= " >> " . getFactionName($fid);
 if ($tskid != '') $breadcrumbs .= " >> " . getTaskTitle($tskid);
