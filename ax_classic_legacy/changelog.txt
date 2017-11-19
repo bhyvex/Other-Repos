@@ -1,5 +1,8 @@
 AX Classic Editor Changelog (Started May 9, 2009) --Belatedly
 |-------------------------------------------------------------|
+== November 18, 2017==
+Patrikpatrik: When a zone that doesn't have a graveyard but an existing matching graveyard_ID, the associated zone will be listed.
+
 == November 17, 2017==
 Patrikpatrik: Specified Graveyard list selection upon zone selection.
 Patrikpatrik: Can view complete list separately & add Graveyard data in 'Zone' tab.
