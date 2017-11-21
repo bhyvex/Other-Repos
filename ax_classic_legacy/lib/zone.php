@@ -113,16 +113,9 @@ switch ($action) {
     check_authorization();
     $body = new Template("templates/zone/graveyard.view.tmpl.php");
     $body->set('currzone', $z);
-	//$body->set('gravezone', get_graveyard_zone());
     $graveyard = graveyard_info();
     if ($graveyard) {
       foreach ($graveyard as $key=>$value) {
-        $body->set($key, $value);
-      }
-    }
-	$associatedgy = associated_graveyard();
-	if ($associatedgy) {
-      foreach ($associatedgy as $key=>$value) {
         $body->set($key, $value);
       }
     }
@@ -546,7 +539,7 @@ function graveyard_info() {
   if(!$z) {
 	  $query = "SELECT * FROM graveyard";
   } else {
-	  $query = "SELECT * FROM graveyard WHERE zone_id=\"$zid\"";
+	  $query = "SELECT * FROM graveyard WHERE id in (SELECT graveyard_id FROM zone WHERE zoneidnumber=$zid)";
   }
  
   $result = $mysql->query_mult_assoc($query);
@@ -554,22 +547,6 @@ function graveyard_info() {
     foreach ($result as $result) {
      $array['graveyard'][$result['id']] = array("graveyard_id"=>$result['id'], "zone_id"=>$result['zone_id'], "x"=>$result['x'], "y"=>$result['y'], "z_coord"=>$result['z'], "heading"=>$result['heading']);
          }
-       }
-  return $array;
-  }
-
-  function associated_graveyard() { // Added to distinguish a non gy zone with an associated 1.
-	global $mysql, $z;
-	$zid = getZoneID($z);
-	$array = array();
-	//$query = "SELECT short_name, graveyard_id, zoneidnumber FROM zone WHERE graveyard_id > '0' AND graveyard_id = '$x' ORDER BY zoneidnumber ASC LIMIT 50 OFFSET 1;";
-	$query = "SELECT short_name, graveyard_id, zoneidnumber FROM zone WHERE zoneidnumber = '$zid' and graveyard_id > '0';";
-	$result = $mysql->query_mult_assoc($query);
-	if ($result) {
-    foreach ($result as $result) {
-     //$array['associatedgy'][$result['id']] = array("assocgy_id"=>$result['id'], "short_name"=>$result['short_name'], "x"=>$result['x'], "y"=>$result['y'], "z_coord"=>$result['z'], "heading"=>$result['heading']);
-       $array['associatedgy'][$result['id']] = array("assocgy_id"=>$result['graveyard_id'], "short_name"=>$result['short_name'], "zoneid"=>$result['zoneidnumber']);
-		 }
        }
   return $array;
   }
@@ -614,12 +591,4 @@ function get_graveyard_zone() {
   return $result['short_name'];
 }
 
-function get_alternate_gyzone($x) { // alternate query when associated zone exists for 1 last check to determine classic zone gy
-	global $mysql;
-
-	$query = "SELECT * FROM graveyard WHERE id = \"$x\"";
-	
-	$result = $mysql->query_assoc($query);
-	return $result['zone_id'];
-}
 ?>
