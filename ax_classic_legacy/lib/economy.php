@@ -13,6 +13,16 @@
 				$body->set($key, $value);
 				}
 			}
+		$cash2 = get_cash_totals2();
+			if ($cash2) {
+			  $body->set('cash2', $cash2);
+			}
+		$richest2 = get_richest_players2();
+			if ($richest2) {
+				foreach ($richest2 as $key=>$value) {
+				$body->set($key, $value);
+				}
+			}
 		break;
  }
  function get_cash_totals() {
@@ -51,6 +61,47 @@
 	
 	while($row = mysqli_fetch_array($result)) {
 	$array['richest'][$row['name']] = array("name" => $row['name'], "account_id" => $row['account_id'], "timelaston" => $row["FROM_UNIXTIME(timelaston, '%Y %b %e')"], 
+	 "FORMAT(platinum, 0)" => $row['FORMAT(platinum, 0)'],  "FORMAT(platinum_bank, 0)" => $row['FORMAT(platinum_bank, 0)'], "FORMAT((platinum + platinum_bank), 0)" => $row['FORMAT((platinum + platinum_bank), 0)']);
+	}
+	return $array;
+ }
+ 
+ function get_cash_totals2() {
+	$HOSTNAME2 = "192.168.2.148";
+	$USERNAME2 = "eq";
+	$PASSWORD2 = "lansing222";
+	$DATABASE2 = "polls";
+	$CON2 = mysqli_connect($HOSTNAME2, $USERNAME2, $PASSWORD2, $DATABASE2);
+	$query = "SELECT FORMAT(SUM(platinum) + SUM(platinum_bank), 0) AS 'platinum' FROM wealthiest2";
+	$result = mysqli_query($CON2, $query);
+	$row = mysqli_fetch_array($result);
+	$platinum = $row['platinum'];
+	$query = "SELECT FORMAT(SUM(gold) + SUM(gold_bank), 0) AS 'gold' FROM wealthiest2";
+	$result = mysqli_query($CON2, $query);
+	$row = mysqli_fetch_array($result);
+	$gold = $row['gold'];
+	$query = "SELECT FORMAT(SUM(silver) + SUM(silver_bank), 0) AS 'silver' FROM wealthiest2";
+	$result = mysqli_query($CON2, $query);
+	$row = mysqli_fetch_array($result);
+	$silver = $row['silver'];
+	$query = "SELECT FORMAT(SUM(copper) + SUM(copper_bank), 0) AS 'copper' FROM wealthiest2";
+	$result = mysqli_query($CON2, $query);
+	$row = mysqli_fetch_array($result);
+	$copper = $row['copper'];
+	$cash = array("copper"=> $copper, "silver"=> $silver, "gold"=> $gold, "platinum" => $platinum);
+	return $cash;
+ }
+ function get_richest_players2() {
+	$HOSTNAME2 = "192.168.2.148";
+	$USERNAME2 = "eq";
+	$PASSWORD2 = "lansing222";
+	$DATABASE2 = "polls";
+	$CON2 = mysqli_connect($HOSTNAME2, $USERNAME2, $PASSWORD2, $DATABASE2);
+	$query = "SELECT name, account_id, FROM_UNIXTIME(timelaston, '%Y %b %e'), FORMAT(platinum, 0), FORMAT(platinum_bank, 0), FORMAT((platinum + platinum_bank), 0) FROM wealthiest2 ORDER BY (platinum + platinum_bank) DESC LIMIT 20";
+	$result = mysqli_query($CON2, $query);
+	
+	while($row = mysqli_fetch_array($result)) {
+	$array['richest2'][$row['name']] = array("name" => $row['name'], "account_id" => $row['account_id'], "timelaston" => $row["FROM_UNIXTIME(timelaston, '%Y %b %e')"], 
 	 "FORMAT(platinum, 0)" => $row['FORMAT(platinum, 0)'],  "FORMAT(platinum_bank, 0)" => $row['FORMAT(platinum_bank, 0)'], "FORMAT((platinum + platinum_bank), 0)" => $row['FORMAT((platinum + platinum_bank), 0)']);
 	}
 	return $array;
