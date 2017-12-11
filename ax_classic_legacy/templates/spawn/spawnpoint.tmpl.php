@@ -25,8 +25,14 @@
           </tr>
         </table>
       </div>
-
-      <div class="edit_form_content">
+	  <div style="background-color: #BBBBBB; border-bottom: 0.5px solid black; padding-left: 3px">
+		  <table>
+			  <tr>
+				<td> Note: Respawn & Variance fields are in seconds. E.g. 600 seconds = 10 minutes </td>
+			  </tr>
+			</table>
+      </div>
+	  <div class="edit_form_content">
         <table width="100%">
           <tr>
             <td width="33%">x: <?=$x?></td>
