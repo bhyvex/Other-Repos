@@ -1,5 +1,8 @@
 AX Classic Editor Changelog (Started May 9, 2009) --Belatedly
 |-------------------------------------------------------------|
+== December 12, 2017==
+Patrikpatrik: Fixed error logs upon empty search results for NPCs, Loot, Spawns, Merchants, Spells.
+
 == December 11, 2017==
 Patrikpatrik: Server economy update, in about 3 months server plat has increased by apprx. 150k.
 Patrikpatrik: Helper notes for respawn & variance timers. Default respawn changed from 1200 to 600.
