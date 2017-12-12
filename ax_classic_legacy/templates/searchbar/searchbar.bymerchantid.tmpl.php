@@ -12,9 +12,11 @@
               &nbsp; and &nbsp;
               <select OnChange="gotosite(this.options[this.selectedIndex].value)">
                 <option value="">Select a Merchant</option>
+<?if($npcs):?>
 <?php foreach ($npcs as $npc): ?>
                 <option value="index.php?editor=<?=$curreditor?>&z=<?=$currzone?>&npcid=<?=$npc['id']?>"<?php if ($currnpc == $npc['id']): ?> selected<?php endif;?>><?=$npc['name']?></option>
 <?php endforeach;?>
+<?endif;?>
               </select>
             </td>
             <td align="right"> or <strong>&nbsp;2.</strong>
