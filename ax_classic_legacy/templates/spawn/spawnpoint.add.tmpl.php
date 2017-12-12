@@ -8,7 +8,13 @@
           </tr>
         </table>
       </div>
-
+	<div style="background-color: #BBBBBB; border-bottom: 0.5px solid black; padding-left: 3px">
+		  <table>
+			  <tr>
+				<td> Note: Respawn & Variance fields are in seconds. E.g. 600 seconds = 10 minutes </td>
+			  </tr>
+			</table>
+      </div>
       <div class="edit_form_content">
         <form name="spawnpoint" method="post" action="index.php?editor=spawn&z=<?=$currzone?>&npcid=<?=$npcid?>&action=15">
         Suggested ID:<br>
@@ -35,7 +41,7 @@
 			</td>
             <td width="33%">
 			  respawn:<br>
-			  <input type="text" name="respawntime" value="1200">
+			  <input type="text" name="respawntime" value="600">
 			</td>
             <td width="34%">
 			  pathgrid:<br>
