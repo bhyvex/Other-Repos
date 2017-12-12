@@ -2,7 +2,7 @@ AX Classic Editor Changelog (Started May 9, 2009) --Belatedly
 |-------------------------------------------------------------|
 == December 11, 2017==
 Patrikpatrik: Server economy update, in about 3 months server plat has increased by apprx. 150k.
-Patrikpatrik: Helper notes for respawn & variance timers.
+Patrikpatrik: Helper notes for respawn & variance timers. Default respawn changed from 1200 to 600.
 
 == November 18, 2017==
 Patrikpatrik: When a zone that doesn't have a graveyard but an existing matching graveyard_ID, the associated zone will be listed.
