@@ -1,5 +1,8 @@
 AX Classic Editor Changelog (Started May 9, 2009) --Belatedly
 |-------------------------------------------------------------|
+== March 25, 2018==
+Patrikpatrik: Addition of New Easter event8 in Events tab list.
+
 == December 12, 2017==
 Patrikpatrik: Fixed error logs upon empty search results for NPCs, Loot, Spawns, Merchants, Spells.
 
