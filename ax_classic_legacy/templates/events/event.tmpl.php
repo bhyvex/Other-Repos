@@ -8,8 +8,9 @@ $event4 = "Pitch Black Event";
 $event5 = "Random Moonstone Event";
 $event6 = "Christmas Event";
 $event7 = "Band Dislikes Orcs";
-$event8 = "";
-$eventarr = array($event1, $event2, $event3, $event4, $event5, $event6, $event7, $event8);
+$event8 = "New Easter Event";
+$event9 = "";
+$eventarr = array($event1, $event2, $event3, $event4, $event5, $event6, $event7, $event8, $event9);
 ?>
         <div class="table_container" style="width: 400px;">
           <div class="table_header">
