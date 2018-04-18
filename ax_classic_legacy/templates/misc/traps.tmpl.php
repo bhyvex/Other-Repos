@@ -13,54 +13,54 @@
        <table class="table_content2" width="100%">
 <? if (isset($traps)):?>
          <tr>
-          <td align="center" width="5%"><strong>id</strong></td>
-          <td align="center" width="5%"><strong>x</strong></td>
-          <td align="center" width="5%"><strong>y</strong></td>
-          <td align="center" width="5%"><strong>z</strong></td>
-          <td align="center" width="5%"><strong>maxzdiff</strong></td>
-          <td align="center" width="5%"><strong>radius</strong></td>
-          <td align="center" width="5%"><strong>chance</strong></td>
-          <td align="center" width="10%"><strong>effect</strong></td>
-          <td align="center" width="10%"><strong>value</strong></td>
-          <td align="center" width="10%"><strong>value2</strong></td>
-          <td align="center" width="5%"><strong>skill</strong></td>
-          <td align="center" width="5%"><strong>level</strong></td>
-          <td align="center" width="5%"><strong>respawn</strong></td>
-          <td align="center" width="5%"><strong>variance</strong></td>
-          <td align="center" width="5%"><strong>version</strong></td>
-          <th width="5%"></th>
+          <td align="center"><strong>id</strong></td>
+          <td align="center"><strong>x</strong></td>
+          <td align="center"><strong>y</strong></td>
+          <td align="center"><strong>z</strong></td>
+          <td align="center"><strong>maxzdiff</strong></td>
+          <td align="center"><strong>radius</strong></td>
+          <td align="center"><strong>chance</strong></td>
+          <td align="center"><strong>effect</strong></td>
+          <td align="center"><strong>value</strong></td>
+          <td align="center"><strong>value2</strong></td>
+          <td align="center"><strong>skill</strong></td>
+          <td align="center"><strong>level</strong></td>
+          <td align="center"><strong>respawn</strong></td>
+          <td align="center"><strong>variance</strong></td>
+          <td align="center"><strong>version</strong></td>
+          <td align="center"></td>
          </tr>
 <?$x=0; foreach($traps as $traps=>$v):?>
         <tr bgcolor="#<? echo ($x % 2 == 0) ? "AAAAAA" : "BBBBBB";?>">
-          <td align="center" width="5%"><?=$v['tid']?></td>
-          <td align="center" width="5%"><?=$v['x_coord']?></td>
-          <td align="center" width="5%"><?=$v['y_coord']?></td>
-          <td align="center" width="5%"><?=$v['z_coord']?></td>
-          <td align="center" width="5%"><?=$v['maxzdiff']?></td>
-          <td align="center" width="5%"><?=$v['radius']?></td>
-          <td align="center" width="5%"><?=$v['chance']?>%</td>
-          <td align="center" width="10%"><?=$traptype[$v['effect']]?></td>
+          <td align="center"><?=$v['tid']?></td>
+          <td align="center"><?=$v['x_coord']?></td>
+          <td align="center"><?=$v['y_coord']?></td>
+          <td align="center"><?=$v['z_coord']?></td>
+          <td align="center"><?=$v['maxzdiff']?></td>
+          <td align="center"><?=$v['radius']?></td>
+          <td align="center"><?=$v['chance']?>%</td>
+          <td align="center"><?=$traptype[$v['effect']]?></td>
 <?if($v['effect'] == 2 || $v['effect'] == 3):?>
-          <td align="center" width="10%"><a href="index.php?editor=npc&z=<?=get_zone_by_npcid($v['effectvalue'])?>&npcid=<?=$v['effectvalue']?>"><?=getNPCName($v['effectvalue'])?></td>
+          <td align="center"><a href="index.php?editor=npc&z=<?=get_zone_by_npcid($v['effectvalue'])?>&npcid=<?=$v['effectvalue']?>"><?=getNPCName($v['effectvalue'])?></td>
 <?endif;?>
 <?if($v['effect'] == 1 || $v['effect'] == 4):?>
-          <td align="center" width="10%"><?=$v['effectvalue']?></td>
+          <td align="center"><?=$v['effectvalue']?></td>
 <?endif;?>
 <?if($v['effect'] == 0):?>
-          <td align="center" width="10%"><?=getSpellName($v['effectvalue'])?> <span>[<a href="http://lucy.allakhazam.com/spell.html?id=<?=$v['effectvalue']?>">lucy</a>]</span>
+          <td align="center"><?=getSpellName($v['effectvalue'])?> <span>[<a href="http://lucy.allakhazam.com/spell.html?id=<?=$v['effectvalue']?>">lucy</a>]</span>
 <?endif;?>    
 <?if($v['effect'] == 1):?>   
-          <td align="center" width="10%"><?=$alarmtype[$v['effectvalue2']]?></td>  
+          <td align="center"><?=$alarmtype[$v['effectvalue2']]?></td>  
 <?endif;?>
 <?if($v['effect'] < 1 || $v['effect'] > 1):?>
-          <td align="center" width="10%"><?=$v['effectvalue2']?></td>
+          <td align="center"><?=$v['effectvalue2']?></td>
 <?endif;?> 
-          <td align="center" width="5%"><?=$v['skill']?></td>
-          <td align="center" width="5%"><?=$v['level']?></td>
-          <td align="center" width="5%"><?=$v['respawn_time']?></td>
-          <td align="center" width="5%"><?=$v['respawn_var']?></td>
-          <td align="center" width="5%"><?=$v['version']?></td>
-          <td align="right">      
+          <td align="center"><?=$v['skill']?></td>
+          <td align="center"><?=$v['level']?></td>
+          <td align="center"><?=$v['respawn_time']?></td>
+          <td align="center"><?=$v['respawn_var']?></td>
+          <td align="center"><?=$v['version']?></td>
+          <td>      
             <a href="index.php?editor=misc&z=<?=$currzone?>&tid=<?=$v['tid']?>&action=20"><img src="images/edit2.gif" border="0" title="Edit Entry"></a>          
             <a onClick="return confirm('Really Delete Trap <?=$v['tid']?>?');" href="index.php?editor=misc&z=<?=$currzone?>&tid=<?=$v['tid']?>&action=22"><img src="images/remove3.gif" border="0" title="Delete this entry"></a>
           </td>
