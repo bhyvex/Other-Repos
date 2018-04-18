@@ -1,5 +1,9 @@
 AX Classic Editor Changelog (Started May 9, 2009) --Belatedly
 |-------------------------------------------------------------|
+== April 18, 2018==
+Patrikpatrik: Fixed traps section in Misc tab.
+Patrikpatrik: Added notes for traps section regarding pull down drop box.
+
 == March 25, 2018==
 Patrikpatrik: Addition of New Easter event8 in Events tab list.
 
