@@ -1,13 +1,19 @@
 <?
-
-$traptype = array(
+// Replaced with bottom array 4/18/2018 -patrikpatrik
+/*$traptype = array(
   0   => "Casting",
   1   => "Alarm",
   2   => "NPC S. Area",
   3   => "NPC L. Area",
   4   => "Damage",
+);*/
+$traptype = array(
+  0   => "Spell",
+  1   => "Alarm",
+  2   => "NPC's Wide",
+  3   => "NPC's Close",
+  4   => "Damage"
 );
-
 $alarmtype = array(
   0   => "All aggro",
   1   => "KOS aggro",
