@@ -1,0 +1,141 @@
+/* chat.css */
+/* body {
+	background: #999;
+	min-width: 700px;
+} */
+h1 {
+	display: inline-block;
+}
+#welcome {
+	display: inline-block;
+	margin-left: 150px;
+}
+#logout {
+	display: inline-block;
+	margin-left: 130px;
+}
+#logout:link{
+	text-decoration: none;
+}
+#logout:visited{
+	text-decoration: none;
+	color: blue;
+}
+#logout:hover{
+	text-decoration: underline;
+}
+#logout:active{
+	text-decoration: none;
+}
+#chatWrap {
+	border: 1px solid #419fbf;
+	width: 690px;
+	height: 400px;
+	background: #a3e8ff;
+	border-radius: 4px;
+	box-shadow: 10px -10px 18px -5px #3f3f3f;
+}
+#chatBox {
+	margin-top: 15px;
+	margin-left: 30px;
+	display: inline-block;
+	float: left;
+	background: #c4f0ff;
+	width: 500px; /* 500px */
+	height: 350px; /* 350px */
+	border: 1px solid #419fbf;
+	border-radius: 4px;
+	padding-top: 10px;
+	padding-left: 15px;
+	padding-bottom: 7px;
+	line-height: 1.6;
+	overflow-y: auto;
+	/*color: yellow;*/
+}
+#userPane {
+	display: inline-block;
+	margin-top: 15px;
+	margin-left: -1px;
+	width: 120px; /* 150px */
+	height: 200px; /* 200px */
+	border: 1px solid #419fbf;
+	background: #0d6684;
+	border-radius: 4px;
+	padding-top: 5px;
+	text-align: center;
+	line-height: 1.6;
+}
+input[id=inputBox] {
+	width: 500px;
+	height: 30px;
+	font-size: 16px;
+	padding-left: 5px;
+	margin-left: 30px;
+	margin-top: 39px;
+	margin-bottom: 20px;
+	box-shadow: 10px 10px 17px -5px #3f3f3f;
+}
+#submitChat {
+	position: relative;
+	width: 80px;
+	height: 35px;
+	margin-top: 39px;
+	margin-left: -5px;
+	margin-bottom: 20px;
+	font-size: 16px;
+	font-weight: bold;
+	cursor: pointer;
+	box-shadow: 10px 10px 17px -5px #3f3f3f;
+}
+#loginSubmit {
+	margin-top: 20px;
+	margin-left: 540px;
+	box-shadow: 10px 10px 17px -5px #3f3f3f;
+}
+#registerSubmit {
+	margin-left: 10px;
+	box-shadow: 10px 10px 17px -5px #3f3f3f;
+}
+#loginRegister {
+	margin-top: 20px;
+	margin-left: 100px;
+}
+#username {
+	margin-left: 10px;
+	margin-bottom: 10px;
+}
+#password {
+	margin-left: 13px;
+	margin-bottom: 10px;
+}
+#verifyP {
+	display: none;
+	margin-top: -5px;
+}
+#verify {
+	display: none;
+	margin-left: 38px;
+}
+#formLogin {
+	margin-left: 100px;
+	padding-left: 100px;
+	display: none;
+}
+#login {
+	display: none;
+	margin-left: 192px;
+}
+#register {
+	display: none;
+	margin-left: 184px;
+}
+#userError, #passError, #verifyError {
+	color: #770000;
+	display: inline-block;
+	margin-left: 5px;
+}
+#formResults {
+	display: none;
+	margin-left: 100px;
+	color: #770000;
+}
