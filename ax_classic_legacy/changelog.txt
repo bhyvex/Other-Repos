@@ -1,5 +1,9 @@
 AX Classic Editor Changelog (Started May 9, 2009) --Belatedly
 |-------------------------------------------------------------|
+== July 26, 2018==
+Patrikpatrik: Addition of chat feature in chat tab.
+Patrikpatrik: v2.0 allows own login/registration for now w/ guest only viewing.
+
 == April 18, 2018==
 Patrikpatrik: Fixed traps section in Misc tab.
 Patrikpatrik: Added notes for traps section regarding pull down drop box.
