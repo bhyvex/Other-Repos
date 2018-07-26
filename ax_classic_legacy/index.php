@@ -95,6 +95,9 @@ switch ($editor) {
   case 'monitor':
 	require_once('lib/monitor.php');
 	break;
+  case 'chat':
+	require_once('lib/chat.php');
+	break;
 }
 
 $tmpl->set('javascript', $javascript);
