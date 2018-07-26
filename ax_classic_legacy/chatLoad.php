@@ -20,7 +20,7 @@ session_start();
  $results = mysqli_query($con, $querys);
  while($row = mysqli_fetch_array($results)) {
 	 $datetime = date("F j Y l g:ia", $row["timestamp"]);
-	 echo "[" . $datetime . "] &lt;<span style='font-weight:bold'>" . $row["username"] . "</span>&gt;: " . stripslashes($row["chattext"]) . "<br/>";
+	 echo "<span style='font-size:12px'>[" . $datetime . "]</span> &lt;<span style='font-weight:bold'>" . $row["username"] . "</span>&gt;: " . stripslashes($row["chattext"]) . "<br/>";
 	 //echo "[" . $datetime . "] " . $row["username"] . ": " . $row["chattext"] . "<br/>";
 	 //echo $row["username"] . ": " . $row["chattext"] . "<br/>";
  }
