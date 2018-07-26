@@ -9,6 +9,7 @@ h1 {
 #welcome {
 	display: inline-block;
 	margin-left: 150px;
+	font-size: 14px;
 }
 #logout {
 	display: inline-block;
@@ -51,6 +52,7 @@ h1 {
 	line-height: 1.6;
 	overflow-y: auto;
 	/*color: yellow;*/
+	font-size: 15px;
 }
 #userPane {
 	display: inline-block;
@@ -64,6 +66,7 @@ h1 {
 	padding-top: 5px;
 	text-align: center;
 	line-height: 1.6;
+	font-size: 14px;
 }
 input[id=inputBox] {
 	width: 500px;
