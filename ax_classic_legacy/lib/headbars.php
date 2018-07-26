@@ -123,6 +123,9 @@ switch ($editor) {
   case 'monitor':
     $body = $body;
 	break;
+  case 'chat':
+    $body = $body;
+	break;
 }
 
 function build_tabs () {
@@ -146,6 +149,7 @@ function build_tabs () {
   $tabstatus16 = "off";
   $tabstatus17 = "off";
   $tabstatus18 = "off";
+  $tabstatus19 = "off";
   
   $url = '';
   if ($z) $url = $url . "&z=$z";
@@ -209,6 +213,9 @@ function build_tabs () {
 	case 'monitor':
 	  $tabstatus18 = "on";
 	  break;
+	case 'chat':
+	  $tabstatus19 = "on";
+	  break;
   }
 
   $admin = '';
@@ -237,7 +244,8 @@ function build_tabs () {
         <div class=\"$tabstatus15\"><a href=\"index.php?editor=petitions\">Petitions</a></div>
 		<div class=\"$tabstatus16\"><a href=\"index.php?editor=events\">Events</a></div>
 		<div class=\"$tabstatus17\"><a href=\"index.php?editor=economy\">Economy</a></div>
-		<div class=\"$tabstatus18\"><a href=\"index.php?editor=monitor\">Monitor</a></div><br>
+		<div class=\"$tabstatus18\"><a href=\"index.php?editor=monitor\">Monitor</a></div>
+		<div class=\"$tabstatus19\"><a href=\"index.php?editor=chat\">Chat</a></div><br>
 		<div style=\"float: right;\">$admin<a href=\"index.php?logout\">Logout</a></div>
         <div style=\"float: right; width: 270px; color:rgb(120,0,0); font-size: .85em; text-decoration: blink;\">$serverName Database</a></div>
 

@@ -57,6 +57,9 @@ switch ($editor) {
   case 'monitor':
 	$breadcrumbs = "Monitor Players";
 	break;
+  case 'chat':
+    $breadcrumbs = "Chat Interface 2.0";
+	break;
 }
 
 if ($z != '') $breadcrumbs .= " >> " . getZoneLongName($z) . "  (" . $z . ")";
